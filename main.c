@@ -29,6 +29,8 @@ int main()
 		convert(str, argv);// traverse entire line and store in argv
 		if (strcmp(argv[0], "exit") == 0)  //checks for exit
 			exit(0);
+		if (strcmp(argv[0], "cd") == 0) // change directory
+				chdir(argv);
 		pid_t pid = fork();
 		if(pid < 0)//failed fork
 			exit(1);
